@@ -1,0 +1,88 @@
+/*
+ * Jackson brand tokens (extracted from https://www.jackson.com/ — see migration-work/brand.json).
+ * Fonts are licensed-free look-alikes: dm-sans (Apercu), playfair-display (Superior Title).
+ */
+:root {
+  /* brand colors (jackson.com) */
+  --color-red: #eb0028;
+  --color-plum: #5c2642;
+  --color-plum-dark: #3b052e;
+  --color-beige: #dbcfc7;
+  --color-beige-light: #f8f5f4;
+  --color-grey: #dadada;
+  --color-charcoal: #474546;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-text-muted: #333;
+  --color-text-subtle: #666;
+
+  /* semantic colors */
+  --background-color: var(--color-white);
+  --light-color: var(--color-beige-light);
+  --dark-color: var(--color-charcoal);
+  --text-color: var(--color-black);
+  --heading-color: var(--color-plum);
+  --link-color: var(--color-red);
+  --link-hover-color: var(--color-plum-dark);
+
+  /* fonts */
+  --body-font-family: dm-sans, dm-sans-fallback, verdana, sans-serif;
+  --heading-font-family: playfair-display, playfair-display-fallback, georgia, serif;
+
+  /* body sizes */
+  --body-font-size-m: 19px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
+  --body-line-height: 26px;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 29px;
+  --heading-line-height-xxl: 37px;
+  --heading-font-size-xl: 32px;
+  --heading-line-height-xl: 40px;
+  --heading-font-size-l: 27px;
+  --heading-line-height-l: 35px;
+  --heading-font-size-m: 19px;
+  --heading-line-height-m: 27px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* layout */
+  --content-max-width: 1440px;
+  --content-gutter: 20px;
+  --section-spacing: 32px;
+
+  /* nav height (utility bar + masthead) */
+  --nav-height: 164px;
+}
+
+@media (width >= 600px) {
+  :root {
+    --heading-font-size-xxl: 36px;
+    --heading-line-height-xxl: 46px;
+    --heading-font-size-xl: 40px;
+    --heading-line-height-xl: 50px;
+    --heading-font-size-l: 34px;
+    --heading-line-height-l: 44px;
+    --heading-font-size-m: 24px;
+    --heading-line-height-m: 34px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
+    --section-spacing: 52px;
+  }
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 46px;
+    --heading-line-height-xxl: 56px;
+    --section-spacing: 72px;
+  }
+}
+
+@media (width >= 1200px) {
+  :root {
+    --section-spacing: 92px;
+    --nav-height: 161px;
+  }
+}

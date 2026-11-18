@@ -1,0 +1,18 @@
+{
+  "variantName": "columns",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Generic flex columns (columns-N-cols, image columns flagged columns-img-col) with Jackson typography: 20px/30px paragraphs, lists with red bullets, 20px accent arrow CTA. In a light or grey section: text column (605px) inset 55px and an image column (645x536) inset 35px from the panel edges; on mobile text first, then the image full panel width at the bottom.",
+  "contentPattern": "One row; one cell per column. Text cell: heading, paragraph, list, bold+italic link. Image cell: a single image.",
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Text and image feature sections, e.g. 'Can an annuity help you reach your goals?' inside a section styled light.",
+    "pagesUsing": [
+      "/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-18"
+  },
+  "reuseGuidance": "For the panel layout use two columns (text, image) in a light or grey section. Other column counts and sections keep the generic layout."
+}

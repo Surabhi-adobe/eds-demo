@@ -1,0 +1,27 @@
+{
+  "variantName": "cards",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Default: auto-fill grid of bordered image cards. icons: three centred columns (1192px max) with a 56px icon, Playfair title, text and an accent arrow link, separated by 1px vertical dividers. feature: three equal-height cards with a cover image on top and a dark plum body (beige title, white semibold text) with a red primary button anchored 25px from the bottom.",
+  "contentPattern": "One row per card. Cell 1: image (icon for the icons variant). Cell 2: title (heading or bold paragraph), text, link (bold+italic = accent arrow link for icons, bold = primary button for feature).",
+  "options": [
+    {
+      "class": "icons",
+      "label": "Icons"
+    },
+    {
+      "class": "feature",
+      "label": "Feature"
+    }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "icons: resource/tool links such as 'Retirement planning resources'. feature: 'Additional resources' promo cards with images.",
+    "pagesUsing": [
+      "/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-18"
+  },
+  "reuseGuidance": "icons and feature are laid out for three cards per row; use multiples of three. Put the section heading as default content in a centered section."
+}

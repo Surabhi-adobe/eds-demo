@@ -1,0 +1,18 @@
+{
+  "variantName": "stats",
+  "baseBlock": "custom",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Two columns inside a grey section panel: an intro column (h2, paragraph with footnote superscripts, primary and secondary buttons side by side with a 5px gap) and a narrow column of stacked statistics (Playfair 24/34 plum value over a 19/26 label, 31px between stats). Mobile: stacked, full-width buttons.",
+  "contentPattern": "Row 1: one cell with heading, paragraph and button links. Each following row: value | label. A stat row may also be a single cell with a heading (value) and a paragraph (label).",
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Company highlights such as 'The Jackson difference', with key figures beside the intro copy. Place in a section styled grey.",
+    "pagesUsing": [
+      "/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-18"
+  },
+  "reuseGuidance": "Use for 2-5 short figures. Keep values short (e.g. '$338 billion'); footnote markers go in the label as superscript."
+}
