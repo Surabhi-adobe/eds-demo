@@ -1,0 +1,174 @@
+/* full-bleed: the carousel spans the viewport with no side gutters */
+.carousel-container .carousel-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .carousel-slide[hidden] {
+  display: none;
+}
+
+/* mobile: image on top, card below */
+.carousel .carousel-slide-image picture {
+  display: block;
+}
+
+.carousel .carousel-slide-image img {
+  display: block;
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  object-position: 75% 0;
+}
+
+.carousel .carousel-slide-content {
+  box-sizing: border-box;
+  padding: 35px 35px 20px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.carousel .carousel-slide-content :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 10px;
+  border-bottom: 4px solid var(--color-red);
+  padding-bottom: 14px;
+  color: var(--color-red);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: var(--heading-line-height-xxl);
+}
+
+.carousel .carousel-slide-content p:not(.button-wrapper) {
+  margin: 0;
+  font-size: 15.2px;
+  line-height: 20.8px;
+}
+
+.carousel .carousel-slide-content a.button.accent {
+  font-size: 15.2px;
+}
+
+.carousel .carousel-slide-content a.button.accent::before {
+  top: 7px;
+  width: 16px;
+  height: 16px;
+}
+
+/* tabs: horizontally scrollable on small screens */
+.carousel .carousel-tabs {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.carousel .carousel-tab {
+  flex: 0 0 145px;
+  box-sizing: border-box;
+  min-height: 108px;
+  margin: 0;
+  border: 0;
+  border-bottom: 4px solid var(--color-red);
+  border-radius: 0;
+  padding: 20px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-family: var(--body-font-family);
+  font-size: 15.2px;
+  font-weight: 600;
+  line-height: 20.8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.carousel .carousel-tab[aria-selected="true"] {
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  cursor: default;
+}
+
+.carousel .carousel-tab:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: -6px;
+}
+
+.carousel .carousel-tab[aria-selected="true"]:focus-visible {
+  outline-color: var(--color-red);
+}
+
+.carousel .carousel-tab:hover:not([aria-selected="true"]) {
+  box-shadow: inset 0 0 0 1px var(--color-white);
+  text-decoration: underline;
+}
+
+/* tablet and up: cover image with the white card overlaid on the left */
+@media (width >= 600px) {
+  .carousel .carousel-slide {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 380px;
+  }
+
+  .carousel .carousel-slide-image {
+    position: absolute;
+    inset: 0;
+  }
+
+  .carousel .carousel-slide-image picture,
+  .carousel .carousel-slide-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel .carousel-slide-image img {
+    object-position: 50% 0;
+  }
+
+  .carousel .carousel-slide-content p:not(.button-wrapper) {
+    font-size: var(--body-font-size-m);
+    line-height: var(--body-line-height);
+  }
+
+  .carousel .carousel-slide-content a.button.accent {
+    font-size: var(--body-font-size-m);
+  }
+
+  .carousel .carousel-slide-content a.button.accent::before {
+    top: 6px;
+    width: 19px;
+    height: 19px;
+  }
+
+  .carousel .carousel-slide-content {
+    position: relative;
+    width: calc(100% - 118px);
+    margin: 40px 59px 48px;
+    padding: 31px;
+  }
+
+  .carousel .carousel-tab {
+    flex: 1 1 0;
+    min-height: 76px;
+    padding: 12px 5px;
+    font-size: var(--body-font-size-m);
+    line-height: 26px;
+  }
+}
+
+/* desktop: card 20px from the edge, single-line tabs */
+@media (width >= 900px) {
+  .carousel .carousel-slide-content {
+    width: min(800px, calc(100% - 40px));
+    margin: 40px 20px 31px;
+  }
+
+  .carousel .carousel-tab {
+    min-height: 50px;
+    padding: 10px 5px;
+  }
+}

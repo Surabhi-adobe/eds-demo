@@ -1,0 +1,23 @@
+{
+  "variantName": "carousel",
+  "baseBlock": "carousel",
+  "canonicalModel": "carousel",
+  "visualCharacteristics": "Full-width hero carousel. Desktop: 380px-tall cover background image (anchored to the top) with a white card overlaid on the left (20px inset, 31px above the image bottom) holding a red Playfair heading with a 4px red rule beneath, body copy and an arrow text-link CTA. A row of equal-width tabs sits directly below the image: active tab white with charcoal text and a red bottom border, inactive tabs solid red with white text. Mobile: image on top, card below, tabs scroll horizontally.",
+  "contentPattern": "One row per slide. Cell 1: image. Cell 2: heading (h1 on the first slide, h2 afterwards), paragraph, CTA link formatted bold+italic (accent arrow link). Cell 3: tab label as plain text. Image and label cells are optional; the label falls back to the heading text.",
+  "options": [
+    {
+      "class": "tabs",
+      "label": "Tabs"
+    }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Homepage hero that rotates between a few product highlights, switched by clicking labelled tabs (no autoplay, arrows or dots).",
+    "pagesUsing": [
+      "/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-18"
+  },
+  "reuseGuidance": "Use for 2-5 tabbed hero slides. A single row renders as a plain hero without tabs. Keep tab labels short; they wrap on mobile."
+}

@@ -19,6 +19,73 @@
   display: block;
 }
 
+/* text columns (jackson.com typography) */
+.columns p {
+  font-size: var(--body-font-size-xs);
+  line-height: 24px;
+}
+
+.columns ul {
+  margin: 15px 0 10px 36px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+.columns ul > li {
+  position: relative;
+  margin-bottom: 13px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.columns ul > li::before {
+  content: '\25CF';
+  position: absolute;
+  left: -20px;
+  color: var(--color-red);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* inside a light / grey panel: text first, image bleeds to the panel edges */
+main .section.light .columns > div > div,
+main .section.grey .columns > div > div {
+  order: 0;
+}
+
+main .section.light .columns > div > .columns-img-col,
+main .section.grey .columns > div > .columns-img-col {
+  order: 1;
+  margin: 20px calc(-1 * var(--content-gutter)) -40px;
+}
+
+main .section.light .columns > div > .columns-img-col img,
+main .section.grey .columns > div > .columns-img-col img {
+  aspect-ratio: 645 / 536;
+  object-fit: cover;
+}
+
+@media (width >= 600px) {
+  .columns p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .columns ul > li {
+    font-size: 20px;
+  }
+
+  .columns p.button-wrapper a.button.accent {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .columns p.button-wrapper a.button.accent::before {
+    top: 8px;
+  }
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
@@ -29,5 +96,39 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  /* panels stay stacked until full desktop width, as on jackson.com */
+  main .section.light .columns > div,
+  main .section.grey .columns > div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (width >= 1200px) {
+  /* panel layout: text 605 / image 645 at 1400px, 55px text inset, 35px image inset */
+  main .section.light .columns,
+  main .section.grey .columns {
+    padding: 15px 15px 15px 35px;
+  }
+
+  main .section.light .columns > div,
+  main .section.grey .columns > div {
+    flex-direction: unset;
+    align-items: center;
+    gap: 60px;
+  }
+
+  main .section.light .columns > div > div,
+  main .section.grey .columns > div > div {
+    flex: 605 1 0;
+    order: unset;
+  }
+
+  main .section.light .columns > div > .columns-img-col,
+  main .section.grey .columns > div > .columns-img-col {
+    flex: 645 1 0;
+    margin: 0;
   }
 }

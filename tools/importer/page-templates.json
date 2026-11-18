@@ -1,0 +1,169 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.jackson.com/"
+      ],
+      "representativeUrl": "https://www.jackson.com/",
+      "description": "Jackson.com homepage: tabbed hero carousel, promo, columns, icon cards, stats, feature cards and disclosures",
+      "blocks": [
+        {
+          "name": "carousel-tabs",
+          "instances": [
+            ".hero-space"
+          ]
+        },
+        {
+          "name": "promo",
+          "instances": [
+            ".background-container:has(.spotlight)",
+            ".spotlight"
+          ]
+        },
+        {
+          "name": "columns",
+          "instances": [
+            ".comparison-highlight-layout"
+          ]
+        },
+        {
+          "name": "cards-icons",
+          "instances": [
+            ".cta-icon-card-wrapper"
+          ]
+        },
+        {
+          "name": "stats",
+          "instances": [
+            ".stat-spotlight"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            ".promo-card-wrapper"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero tabbed carousel",
+          "selector": [
+            ".hero-space"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-tabs"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Financial professional spotlight",
+          "selector": [
+            ".background-container:has(.spotlight)"
+          ],
+          "style": null,
+          "blocks": [
+            "promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Can an annuity help you reach your goals?",
+          "selector": [
+            ".background-container:has(.comparison-highlight-layout)"
+          ],
+          "style": "light",
+          "blocks": [
+            "columns"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Annuity disclosure",
+          "selector": [
+            "div.disclosure:nth-of-type(5)"
+          ],
+          "style": "disclosure",
+          "blocks": [],
+          "defaultContent": [
+            "div.disclosure:nth-of-type(5)"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Retirement planning resources",
+          "selector": [
+            ".layout-container:has(.cta-icon-card)"
+          ],
+          "style": "centered",
+          "blocks": [
+            "cards-icons"
+          ],
+          "defaultContent": [
+            ".layout-container:has(.cta-icon-card) > .content-area > h3"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "The Jackson difference",
+          "selector": [
+            ".background-container:has(.stat-spotlight)"
+          ],
+          "style": "grey",
+          "blocks": [
+            "stats"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Additional resources",
+          "selector": [
+            ".layout-container:has(.promo-card)"
+          ],
+          "style": "centered",
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": [
+            ".layout-container:has(.promo-card) > .content-area > h3"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Footnotes",
+          "selector": [
+            "div.disclosure:nth-of-type(9)"
+          ],
+          "style": "footnotes",
+          "blocks": [],
+          "defaultContent": [
+            "div.disclosure:nth-of-type(9)"
+          ]
+        },
+        {
+          "id": "section-9",
+          "name": "Investment disclosure",
+          "selector": [
+            "div.disclosure:nth-of-type(10)"
+          ],
+          "style": "disclosure, separator",
+          "blocks": [],
+          "defaultContent": [
+            "div.disclosure:nth-of-type(10)"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

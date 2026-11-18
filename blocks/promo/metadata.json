@@ -1,0 +1,18 @@
+{
+  "variantName": "promo",
+  "baseBlock": "custom",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Full-width (1400px) 536px-tall panel with a cover background image. A white card (574px wide at desktop, 30px padding) sits 65px from the left and 84px from the top, holding a plum Playfair h2, a 20px paragraph and a red primary button. Mobile: image anchored right, card inset 20px on all sides.",
+  "contentPattern": "Row 1: image. Row 2: heading, paragraph, bold link (primary button). The image may also be in a second cell of the text row, or at the top of the text cell.",
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Homepage spotlight inviting a visitor segment (e.g. financial professionals) to a landing page.",
+    "pagesUsing": [
+      "/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-18"
+  },
+  "reuseGuidance": "Use for one short message over a decorative photo. Keep copy to a heading, one or two sentences and one button so the card fits the 536px panel."
+}
