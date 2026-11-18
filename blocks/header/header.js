@@ -10,8 +10,9 @@ const SECTION_NAMES = ['utility', 'brand', 'sections', 'tools', 'contact'];
  */
 async function fetchNav() {
   // metadata-independent: /content first (local preview), then root (Edge Delivery)
-  let resp = await fetch('/content/nav.plain.html');
-  if (!resp.ok) resp = await fetch('/nav.plain.html');
+  const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  let resp = isLocal ? await fetch('/content/nav.plain.html') : null;
+  if (!resp || !resp.ok) resp = await fetch('/nav.plain.html');
   if (!resp.ok) return null;
 
   const wrapper = document.createElement('div');

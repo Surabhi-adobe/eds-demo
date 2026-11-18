@@ -8,8 +8,9 @@ const SAME_SITE_HOSTS = [window.location.hostname, 'www.jackson.com'];
  */
 async function fetchFooter() {
   // metadata-independent: /content first (local preview), then root (Edge Delivery)
-  let resp = await fetch('/content/footer.plain.html');
-  if (!resp.ok) resp = await fetch('/footer.plain.html');
+  const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  let resp = isLocal ? await fetch('/content/footer.plain.html') : null;
+  if (!resp || !resp.ok) resp = await fetch('/footer.plain.html');
   if (!resp.ok) return null;
 
   const wrapper = document.createElement('div');
